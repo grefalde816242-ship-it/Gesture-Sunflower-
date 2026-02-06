@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Gesture-Controlled 3D Sunflower</title>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+
+<style>
+  body {
+    margin: 0;
+    overflow: hidden;
+    background: radial-gradient(circle at center, #120a02, #000);
+  }
+  #video { display: none; }
+
+  #ui {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: #ffd966;
+    font-family: system-ui, sans-serif;
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
+</style>
+</head>
+
+<body>
+<video id="video" autoplay></video>
+<div id="ui">✋ Move hand to bloom • ↔ rotate • ↑ open • ↓ close</div>
+
+<script src="script.js"></script>
+</body>
+</html>
